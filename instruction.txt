@@ -1,0 +1,75 @@
+Autor y creador: Brayan Marcelo Cangas Vásquez, en representación de la empresa D.M.C Digital Master Code
+
+---------------------------------------------
+Correo electrónico de contacto: admin@gmail.com
+Contraseña de administrador: Admin123*
+
+Archivo SQL en la carpeta SQL
+-----------------------------------------------------
+Cambios necesarios para la conexión a la base de datos en admin>config
+-dbconn.php
+-sspconn.php
+
+Cambios necesarios para la conexión a la base de datos en patient>config
+-config.php
+-----------------------------------------------------
+En el archivo admin>superglobal.php
+Modificar la variable mail_link de acuerdo al nombre de su proyecto y la carpeta en la que se encuentra alojado.
+-Ejemplo en localhost: $mail_link = 'http://localhost/Smiles';
+-Ejemplo en servidor web: $mail_link = 'https://pedc.online';
+
+En los archivos dentist>includes>globals>superglobal y staff>includes>globals>superglobal
+Realizar el mismo cambio en la variable mail_link según el nombre del proyecto y la carpeta.
+
+------------------------------------------------------
+Cambio manual del logo en los informes
+Ruta: admin\assets\dist\img
+
+Si desea cambiar la imagen "pipoicon.png", acceda a admin>pages>reports>logics-builder-pdf.php(línea 184)
+
+Cambio manual de la imagen en logics-builder.pdf
+Para administrador:
+Ruta: admin>fpdf184>logics-builder.pdf
+
+Para dentistas y personal:
+Ruta: dentist>logics-builder.pdf y staff>logics-builder.pdf
+---------------------------------------------------------
+En la página de Administrador, no se requiere contraseña para agregar un paciente
+Ruta: admin>pages>patients>patient-action
+
+Credenciales predeterminadas:
+$password = 'pass123';
+$confirmPassword = 'pass123';
+
+Estas son las contraseñas predeterminadas para los pacientes creados a través de la interfaz de administrador.
+
+--------------------------------------------------TWILIO-------------------------
+PASO 1
+¿Qué producto de Twilio planea utilizar? SMS
+
+¿Qué pretende construir con Twilio? Alertas y Notificaciones
+
+¿Cómo desea utilizar Twilio?
+Mediante código
+Personalizando exactamente lo que necesita
+
+¿Cuál es su lenguaje de programación preferido? PHP
+
+¿Desea que Twilio aloje su código?
+Sí, deseo que Twilio hospede mi código
+
+PASO 2
+
+Obtenga un número de teléfono de Twilio
+
+Obtenga la información de la cuenta
+-SID de la cuenta
+-Token de autenticación
+-Su número de teléfono de Twilio
+
+PASO 3
+
+En el menú lateral, haga clic en #NÚMEROS DE TELÉFONO
+>NÚMEROS DE TELÉFONO>GESTIONAR>IDENTIFICADOR DE LLAMADA VERIFICADO
+
+Agregue un nuevo identificador de llamada
